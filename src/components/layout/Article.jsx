@@ -55,7 +55,7 @@ function loadLess(){
 
   useEffect(() => {
     async function fetchPosts() {
-      let resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+      let resp = await fetch("http://localhost:5051/posts");
       let json = await resp.json();
       setFullData(json);
       setData(json.slice(0, itemPerLoading));
